@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './componetes/login/login.component';
 import { PrincipalComponent } from './componetes/principal/principal.component';
+import { Guars } from './guars/guars';
 
 
 const routes: Routes = [
@@ -10,16 +11,9 @@ const routes: Routes = [
   
   
   //creando rutas
-  {path:"login",component:LoginComponent} ,
-  {path:"principal",component:PrincipalComponent} 
+  {path:"login",component:LoginComponent},
+  {path:"principal",component:PrincipalComponent, canActivate:[Guars]} 
  
-  
-  
-  
-  
-  
-  
-
 ];
 
 @NgModule({

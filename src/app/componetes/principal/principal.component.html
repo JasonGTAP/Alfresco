@@ -1,1 +1,52 @@
-<h1>admin</h1>
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Nombre del archivo</th>
+      <th scope="col">Eliminar</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr  *ngFor="let file of files">
+          
+          <img
+            *ngIf="file.entry.isFolder"
+            src="../../../assets/carpeta.png"/>
+          <img
+            *ngIf="!file.entry.isFolder"
+            src="../../../assets/expediente.png"/>
+     
+      <td>{{file.entry.name}}</td>
+     
+      <td><img
+        src="../../../assets/borrar.png"/></td>
+
+      <td>  <img
+        *ngIf="file.entry.isFolder"
+        src="../../../assets/flecha.png"/>
+      <img
+        *ngIf="!file.entry.isFolder"
+        src="../../../assets/ojo.png"/></td>
+      
+    </tr>
+ 
+  </tbody>
+</table>
+
